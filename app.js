@@ -31,9 +31,7 @@ console.log(cloudinary.config().secure);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(cors({
-  origin: "https://mahirstones.com",
-    "https://admin.mahirstones.com",
-    "https://api.mahirstones.com",
+  origin: '*',
   optionsSuccessStatus: 200
 }))
 app.use(logger('dev'));
