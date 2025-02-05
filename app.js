@@ -12,7 +12,11 @@ var usersRouter = require('./routes/users');
 var adminRouter = require('./routes/admin');
 var addtocartRouter = require("./routes/addtocart")
 var checkoutRouter = require("./routes/checkout")
-
+const allowedOrigins = [
+  "https://mahirstones.com",
+  "https://admin.mahirstones.com",
+  "https://api.mahirstones.com"
+];
 var app = express();
 
 
@@ -31,7 +35,14 @@ console.log(cloudinary.config().secure);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(cors({
-  origin: '*',
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
   optionsSuccessStatus: 200
 }))
 app.use(logger('dev'));
