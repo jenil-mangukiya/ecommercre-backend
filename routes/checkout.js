@@ -402,8 +402,8 @@ router.post("/createsingleproductorder/:id", async (req, res) => {
                         // productInfo = JSON.parse(productDetails);
                         // userData = JSON.parse(userDetails);
                         const instance = new Razorpay({
-                            key_id: `rzp_test_PXdMbxpoZTN9Dz`,
-                            key_secret: `2ThkzsG1i18nwbcEV7cyxam2`,
+                            key_id: ` rzp_test_8KwQdyz1ygkX8x`,
+                        key_secret: `1DXEfwTatnDE75FK8kUnT9IX`,
                         });
 
                         const options = {
@@ -435,8 +435,8 @@ router.post("/createsingleproductorder/:id", async (req, res) => {
                         // userData = JSON.parse(userDetails);
 
                         const instance = new Razorpay({
-                            key_id: `rzp_test_PXdMbxpoZTN9Dz`,
-                            key_secret: `2ThkzsG1i18nwbcEV7cyxam2`,
+                            key_id: ` rzp_test_8KwQdyz1ygkX8x`,
+                            key_secret: `1DXEfwTatnDE75FK8kUnT9IX`,
                         });
 
                         const options = {
